@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class SongController(val service: SongService) {
+
   @GetMapping("/song/list")
   fun getSongList(): List<Song> {
     return service.getAllSongs()
